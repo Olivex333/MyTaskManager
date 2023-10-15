@@ -15,3 +15,5 @@ Import i eksport danych: Aplikacja umożliwia importowanie i eksportowanie danyc
 Narzędzia: "MyTaskManager" oferuje różne narzędzia, które pomagają użytkownikom w codziennym życiu. Może to obejmować kalkulator, konwerter jednostek, przelicznik walut i inne przydatne funkcje.
 
 Dzięki tym funkcjom "MyTaskManager" staje się niezastąpionym narzędziem do kompleksowego zarządzania codziennymi obowiązkami i planowania czasu, z dodatkowym narzędziem w postaci timera, który pozwala dokładnie kontrolować czas wykonywania zadań.
+
+<img src="https://d13uy3bdhwkuhk.cloudfront.net/gallery/2758586-e6cd4c9890f0094243bbcd8e9c6112bc.jpg" alt="Tekst zastępczy obrazka">
