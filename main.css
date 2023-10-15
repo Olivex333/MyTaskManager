@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+
+}
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  background-image: url(bg.png);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.right {
+  position: relative;
+  z-index: 1;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #f1f1f1;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #f1f1f1;
+    border-right: 0.125rem solid #f1f1f1;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #f1f1f1;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #f1f1f1;
+   }
+
+
+
+
+   .input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+  }
+  
+  .input-container input[type="text"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label,
+  .input-container input[type="text"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline,
+  .input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+  }
+
+
+  
+  .input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+}
+
+/* Zaktualizowany selektor dla input typu "password" */
+.input-container input[type="password"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+/* Zaktualizowana etykieta (label) */
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Zaktualizowana etykieta (label) dla input typu "password" w stanie focus i valid */
+.input-container input[type="password"]:focus ~ .label,
+.input-container input[type="password"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Zaktualizowana klasa podkreślenia (underline) */
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+/* Zaktualizowana klasa podkreślenia (underline) dla input typu "password" w stanie focus i valid */
+.input-container input[type="password"]:focus ~ .underline,
+.input-container input[type="password"]:valid ~ .underline {
+    transform: scaleX(1);
+}
+
+
+
+
+.navbar {
+  font-size: 24px;
+  height: 10vh;
+  text-align: center;
+
+}
+h1 {
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin: 5px;
+  position: relative;
+  top: 10px;
+}
+
+/* Stylizacja navbara */
+.navbar {
+  background-color: #0C0908; /* Kolor tła navbara */
+  overflow: hidden;
+}
+
+/* Stylizacja linków w navbarze */
+.navbar a {
+  display: inline-block; /* Teraz linki są blokami, ale zachowują tekst na środku */
+  color: #f1f1f1; /* Kolor tekstu linków */
+  text-align: center;
+  padding: 14px 16px; /* Rozmiar wewnętrznego marginesu linków */
+  text-decoration: none;
+  position: relative; /* Dodane */
+}
+
+/* Stylizacja linii pod linkami */
+.navbar a::after {
+  content: ""; /* Dodane pseudo-element ::after */
+  display: block;
+  width: 0; /* Początkowo linia jest niewidoczna */
+  height: 2px; /* Grubość linii */
+  background-color: #4E4FEB; /* Kolor linii */
+  position: absolute; /* Dodane */
+  bottom: 0; /* Linia będzie na dole linku */
+  left: 0; /* Linia rozpoczyna się od lewej krawędzi linku */
+  transition: width 0.3s ease; /* Dodane animowanie */
+}
+
+/* Po najechaniu myszą, linia się wydłuży */
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.nice-list li:hover {
+  cursor: pointer;
+}
+
+.left {
+    float: left;
+    width: 15%;
+    height: 100vh;
+    background-color: #252525;
+
+}
+
+.sidebar {
+  color: #f1f1f1;
+  padding: 10px;
+}
+
+.notifications {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.notifications i {
+  font-size: 20px;
+  color: #333; /* Kolor ikony */
+}
+
+@keyframes expand {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 1000px; /* Dostosuj szerokość do swoich potrzeb */
+    height: 550px; /* Dostosuj wysokość do swoich potrzeb */
+  }
+}
+
+.overlay {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(1, 0, 0, 0.77);
+  z-index: 100;
+  color: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.overlay h1 {
+  font-size: 64px;
+  position: relative;
+  padding-top: 50px;
+  border-top:#4E4FEB 2px dashed;
+  border-bottom:#4E4FEB 2px dashed;
+  height: 30vh;
+  width: 600px;
+  margin-top: 10px;
+}
+
+.overlay p {
+  position: relative;
+  bottom: 100px;
+}
+
+.x {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #4E4FEB; /* Ustaw kolor na czerwony */
+  cursor: pointer; /* Dodaj kursor wskazujący na to, że można kliknąć */
+}
+
+.overlay.active {
+  display: flex;
+  animation: expand 0.3s forwards;
+}
+
+/* Definicja animacji */
+@keyframes expand {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 1000px; /* Dostosuj szerokość do swoich potrzeb */
+    height: 550px; /* Dostosuj wysokość do swoich potrzeb */
+  }
+}
+
+
+.box-1 {
+    width: 50%;
+    position: relative;
+    left: 250px;
+    top: 150px;
+    border-left: 3px solid #4E4FEB; /* Solidne ciemnoniebieskie obramowanie po lewej stronie */
+    padding-left: 25px; /* Przerwa o szerokości 10 pikseli od lewej strony obramowania */
+    border-radius: 10px;
+}
+
+.right {
+    display: grid;
+    place-items: center;
+}
+
+.pTitle {
+    font-size: 72px;
+}
+
+.pUnderTitle {
+    font-size: 36px;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1200px;
+  height: 900px;
+  margin-top: 40px;
+
+}
+
+.square {
+  flex-basis: calc(50% - 5px);
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Dodaj transform do przejścia */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Dodaj subtelny cień */
+}
+
+.square:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05); /* Powiększ element o 10% */
+  cursor: pointer;
+}
+
+
+.cloud-icon {
+  font-size: 36px; /* Rozmiar ikony */
+  color: #4E4FEB; /* Kolor ikony */
+  padding-top: 25px;
+}
+
+.custom-icon {
+  font-size: 36px; /* Rozmiar ikony */
+  color: #4E4FEB; /* Kolor ikony */
+  padding-top: 25px;
+}
+
+.square-1 .square-2 .square-3 .square-4 {
+  padding-top: 25px;
+}
+
+
+ul.nice-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Stylizacja elementów listy */
+ul.nice-list li {
+  background-color: #333; /* Kolor tła elementu */
+  color: #fff; /* Kolor tekstu */
+  margin: 10px 0; /* Odstęp między elementami */
+  padding: 10px; /* Wewnętrzny odstęp wewnątrz elementu */
+  border-radius: 5px; /* Zaokrąglenie rogów */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cień */
+  font-size: 18px; /* Rozmiar czcionki */
+}
+
+/* Efekt po najechaniu myszką */
+ul.nice-list li:hover {
+  background-color: #444; /* Kolor tła po najechaniu myszką */
+  transform: scale(1.02); /* Powiększenie elementu */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animacja */
+}
+
+.app-info {
+    background-color: #252525;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.app-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.app-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Stylizacja kwadratów zmiany motywu */
+.theme-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.theme-square {
+  width: 25px;
+  height: 25px;
+  background-color: #333; /* Kolor tła kwadratu */
+  border-radius: 25%; /* Zaokrąglone rogi */
+  cursor: pointer;
+  transition: box-shadow 0.3s; /* Dodaj efekt przejścia dla cienia */
+}
+
+/* Dodaj cień po najechaniu na kwadrat */
+.theme-square:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dodaj cień po najechaniu */
+}
+
+.user-info {
+  margin-top: 15px;
+  background-color: #252525;
+  color: #f1f1f1;
+  padding: 20px;
+  display: flex; /* Ustawienie kontenera jako flexbox */
+  align-items: center; /* Wyjustowanie zawartości w pionie */
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 18px;
+  flex-grow: 1; /* Tekst zajmuje dostępne miejsce */
+}
+
+img {
+  max-width: 100px; /* Ustawienie szerokości obrazka */
+  height: 10vh;
+  border: 1px solid #4E4FEB; /* Obramowanie obrazka na niebiesko 1px */
+  border-radius: 5px; /* Zaokrąglenie obrazka (dla avatara) */
+  margin-right: 20px; /* Dodatkowy odstęp od tekstu */
+}
+
+h3 p {
+  font-weight: normal;
+
+}
+
+
+#calendar {
+  padding: 50px ;
+  height: 100vh;
+
+}
+
+li a {
+  text-decoration: none; /* Usunięcie podkreślenia */
+  color: inherit; /* Dziedziczenie koloru tekstu od rodzica (li) */
+}
+
+li  {
+  text-decoration: none; /* Usunięcie podkreślenia */
+  color: inherit; /* Dziedziczenie koloru tekstu od rodzica (li) */
+}
+
+li a:visited {
+  color: inherit; /* Dziedziczy kolor tekstu od rodzica */
+  text-decoration: none; /* Usuwa podkreślenie odwiedzonych linków */
+}
+
+
+.fc .fc-daygrid-day-frame {
+  background-color: #f1f1f1;
+  color: #4E4FEB;
+  overflow-y: hidden;
+  overflow-y: hidden;
+}
