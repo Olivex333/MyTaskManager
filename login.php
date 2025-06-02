@@ -1,6 +1,6 @@
 <?php 
 
-session_set_cookie_params(3600); // Ustaw czas wygaśnięcia sesji na 3600 sekund (jedna godzina)
+session_set_cookie_params(3600); 
 session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,11 +49,9 @@ if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) 
     exit;
 }
 
-// Inicjalizacja połączenia z bazą danych
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=projekt", "root", "");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "Połączono z bazą danych!<br>";
 } catch (PDOException $e) {
     die("Błąd połączenia z bazą danych: " . $e->getMessage());
 }
@@ -62,10 +60,8 @@ if (isset($_POST['submit'])) {
     $login = $_POST['Login'];
     $password = $_POST['Password'];
 
-    // Szyfruj hasło za pomocą SHA-256, tak samo jak w rejestracji
     $hashedPassword = hash('sha256', $password);
 
-    // Sprawdź, czy istnieje użytkownik o podanym loginie i haśle w bazie danych
     $sql = "SELECT * FROM Login WHERE Login = :login AND Password = :password";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':login', $login);
@@ -75,13 +71,11 @@ if (isset($_POST['submit'])) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        // Dane logowania są poprawne, rozpocznij sesję
         $_SESSION['user_logged_in'] = true;
         $_SESSION['user_login'] = $login;
-        header('Location: main.php'); // Przekieruj na stronę główną
+        header('Location: main.php'); 
         exit;
     } else {
-        // Dane logowania są niepoprawne, wyświetl odpowiedni komunikat
         echo "Nieprawidłowy login lub hasło.";
     }
 }
