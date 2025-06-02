@@ -45,7 +45,7 @@ session_start(); ?>
 <?php
 
 if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) {
-    header('Location: main.php'); // Przekieruj użytkownika, jeśli jest już zalogowany
+    header('Location: main.php'); 
     exit;
 }
 
