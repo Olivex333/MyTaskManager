@@ -21,8 +21,7 @@ if (isset($_SESSION['user_id'])) {
         die("Błąd połączenia z bazą danych: " . $e->getMessage());
     }
 } else {
-    // Obsłuż sytuację, gdy nie masz dostępu do ID użytkownika
-    // Możesz przekierować użytkownika na stronę logowania lub wykonać inne działania.
+
 }
 
 $pogoda = "Raining";
