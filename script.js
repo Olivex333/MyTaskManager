@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   closeButton.addEventListener('click', () => {
-    overlay.classList.remove('active'); // Usuń klasę 'active' po kliknięciu na X
-    document.documentElement.style.backgroundColor = ''; // Usuń tło całej strony
+    overlay.classList.remove('active'); 
+    document.documentElement.style.backgroundColor = '';
   });
 });
 
