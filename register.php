@@ -63,8 +63,8 @@ if (isset($_POST['submit'])) {
         $_SESSION['user_logged_in'] = true;
         $_SESSION['user_login'] = $login;
         echo "Rejestracja zakończona pomyślnie.";
-        header('Location: login.php'); // Przekieruj na stronę logowania
-        exit; // Zakończ bieżący skrypt
+        header('Location: login.php'); 
+        exit; 
     } else {
         echo "Wystąpił błąd podczas rejestracji.";
     }
