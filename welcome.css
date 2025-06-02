@@ -27,7 +27,7 @@ body {
 
 .left {
   width: 50%;
-  height: 100vh; /* 100% wysokości widoku */
+  height: 100vh; 
   background-color: #333;
   color: white;
   display: flex;
@@ -35,10 +35,10 @@ body {
   align-items: center;
 }
 
-/* Stylizacja prawej części strony */
+
 .right {
   width: 50%;
-  height: 100vh; /* 100% wysokości widoku */
+  height: 100vh; 
   background-color: #f1f1f1;
   display: flex;
   justify-content: center;
