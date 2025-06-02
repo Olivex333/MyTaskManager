@@ -2,7 +2,6 @@
 session_start();
 
 
-// Zakładamy, że masz dostęp do ID użytkownika, na przykład z sesji
 if (isset($_SESSION['user_id'])) {
     $id_uzytkownika = $_SESSION['user_id'];
 
