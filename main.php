@@ -9,9 +9,8 @@ if (isset($_SESSION['user_id'])) {
         $pdo = new PDO("mysql:host=localhost;dbname=projekt", "root", "");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Zapytanie do bazy danych o nazwę użytkownika
         $stmt = $pdo->prepare("SELECT Login FROM Login WHERE ID = :id"); 
-        $stmt->bindParam(':id', $id_uzytkownika); // Przypisz ID użytkownika
+        $stmt->bindParam(':id', $id_uzytkownika); 
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $nazwa_uzytkownika = $row['Login'];
